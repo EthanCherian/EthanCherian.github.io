@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
                 className={`mt-3 space-y-2 origin-top right-0 transition-all duration-250 
                     ease-out ${open ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 -translate-y-2 scale-95 pointer-events-none'}`}>
                 <NavLink href="/">Home</NavLink>
-                <NavLink href="/about">About</NavLink>
+                <NavLink href="/experience">Experience</NavLink>
                 <NavLink href="/projects">Projects</NavLink>
                 <NavLink href="/contact">Contact</NavLink>
             </div>

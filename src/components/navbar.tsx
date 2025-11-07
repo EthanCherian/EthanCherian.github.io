@@ -18,11 +18,12 @@ const Navbar: React.FC = () => {
     const [open, setOpen] = useState(false);
 
     return (
-        <nav className="fixed top-4 right-4 z-50 border border-blue-500 bg-gray-900/95 rounded-2xl px-4 py-3 shadow-xl text-white">
+        <nav className={`fixed top-4 right-4 z-50 border border-blue-500 bg-gray-900/95 rounded-2xl px-4 py-3 shadow-xl text-white overflow-hidden transition-all duration-300
+            ease-in-out ${open ? 'h-64' : 'h-16'}`}>
             {/* Header / Toggle */}
             <div className="flex items-center gap-3">
                 <span className="text-sm font-semibold tracking-wide">
-                    My Portfolio
+                    Navigate
                 </span>
 
                 <button
@@ -33,9 +34,9 @@ const Navbar: React.FC = () => {
                     >
 
                 {/* Hamburger / X icon */}
-                <span className={`h-0.5 w-5 bg-white rounded transition-all duration-300 ${open ? 'translate-y-1.5 rotate-45' : '-translate-y-1'}`}/>
+                <span className={`h-0.5 w-5 bg-white rounded transition-all duration-300 ${open ? 'rotate-45 translate-y-[2.1px] -translate-x-[0.5px]' : '-translate-y-1'}`}/>
                 <span className={`h-0.5 w-5 bg-white rounded transition-all duration-300 ${open ? 'opacity-0' : 'opacity-100'}`}/>
-                <span className={` h-0.5 w-5 bg-white rounded transition-all duration-300 ${open ? '-translate-y-1.5 -rotate-45' : 'translate-y-1'}`}/>
+                <span className={`h-0.5 w-5 bg-white rounded transition-all duration-300 ${open ? '-rotate-45 -translate-y-[2.1px] translate-x-[0.5px]' : 'translate-y-1'}`}/>
             
                 </button>
             </div>
